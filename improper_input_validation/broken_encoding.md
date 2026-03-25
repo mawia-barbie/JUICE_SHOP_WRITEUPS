@@ -1,6 +1,6 @@
 # OWASP Juice Shop – Improper Input Validation (Encoding Challenge)
 
-## Challenge: Broken Image on Photo Wall
+## Challenge: Retrieve the hidden image of Bjoern's cat by fixing improper encoding.
 
 ---
 
@@ -9,6 +9,13 @@
 Identify and fix an improperly encoded image URL on the Photo Wall in order to successfully load a hidden image.
 
 ---
+## steps taken
+1. Navigated to the Photo Wall.
+2. Observed that one image was broken.
+3. Inspected the image URL in the browser.
+4. Noticed improper encoding in the URL.
+5. Corrected the encoding manually.
+6. Reloaded the image successfully.
 
 ##  Background
 
@@ -65,3 +72,8 @@ Paste the corrected URL into the browser using your developer tools
 http://localhost:3000/assets/public/images/uploads/ᓚᘏᗢ-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg
 
 The image should now load successfully.
+## Key Takeaways
+
+- Always validate and encode user input properly.
+- Improper encoding can break application functionality.
+- Attackers can exploit encoding issues for injection attacks.
