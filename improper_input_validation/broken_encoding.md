@@ -26,7 +26,6 @@ While browsing the **Photo Wall**, one image appeared broken (not loading correc
 
 Using browser Developer Tools (Inspect Element), the following image path was identified:
 
-```text
 /assets/public/images/uploads/ᓚᘏᗢ-#zatschi-#whoneedsfourlegs-1572600969477.jpg
 
 The issue lies in the use of the # character within the file name:
