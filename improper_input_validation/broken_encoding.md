@@ -10,7 +10,7 @@ Identify and fix an improperly encoded image URL on the Photo Wall in order to s
 
 ---
 
-## 🧠 Background
+##  Background
 
 This challenge is part of OWASP Juice Shop and demonstrates a common web vulnerability:
 
@@ -20,7 +20,7 @@ Modern web applications must properly encode special characters in URLs. Failure
 
 ---
 
-## 🔍 Initial Observation
+##  Initial Observation
 
 While browsing the **Photo Wall**, one image appeared broken (not loading correctly).
 
@@ -28,14 +28,14 @@ Using browser Developer Tools (Inspect Element), the following image path was id
 
 /assets/public/images/uploads/ᓚᘏᗢ-#zatschi-#whoneedsfourlegs-1572600969477.jpg
 
+ ## problem identification
 The issue lies in the use of the # character within the file name:
 
 ᓚᘏᗢ-#zatschi-#whoneedsfourlegs-1572600969477.jpg
 Why is this a problem?
 
 In URLs:
-
-# is a fragment identifier
+is a fragment identifier
 Anything after # is NOT sent to the server
 Result
 
@@ -50,16 +50,17 @@ This leads to:
 ❌ Fallback response (text/html)
 🛠️ Solution
 
+## solution
 To fix this issue, the # character must be URL encoded.
 
 Encoding Rule
-# → %23
+ %23
 ✅ Corrected URL
 /assets/public/images/uploads/ᓚᘏᗢ-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg
-🚀 Execution
-Method 1: Browser
 
-Paste the corrected URL into the browser:
+##execution
+
+Paste the corrected URL into the browser using your developer tools 
 
 http://localhost:3000/assets/public/images/uploads/ᓚᘏᗢ-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg
 
