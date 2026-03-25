@@ -45,10 +45,10 @@ The server only receives:
 
 This leads to:
 
-❌ Broken image
-❌ Incorrect server request
-❌ Fallback response (text/html)
-🛠️ Solution
+ Broken image , 
+ Incorrect server request ,
+ Fallback response (text/html)
+
 
 ## solution
 To fix this issue, the # character must be URL encoded.
