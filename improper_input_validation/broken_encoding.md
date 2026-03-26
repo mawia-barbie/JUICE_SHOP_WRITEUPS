@@ -71,7 +71,9 @@ Paste the corrected URL into the browser using your developer tools
 
 http://localhost:3000/assets/public/images/uploads/ᓚᘏᗢ-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg
 
-The image should now load successfully.
+The image should now load successfully as shown below
+
+![Solution Screenshot](improper_input_validation/improper_input_validation_images/solution.png)
 ## Key Takeaways
 
 - Always validate and encode user input properly.
