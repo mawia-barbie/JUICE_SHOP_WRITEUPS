@@ -5,20 +5,20 @@ Exploit a SQL Injection vulnerability in the login functionality to gain unautho
 
 ---
 
-## 🧩 Vulnerability Description
+##  Vulnerability Description
 The login form in OWASP Juice Shop is vulnerable to **SQL Injection**, allowing attackers to manipulate backend SQL queries through unsanitized user input.
 
 This flaw enables authentication bypass without valid credentials.
 
 ---
 
-## ⚙️ Affected Component
+##  Affected Component
 - Login form (`/rest/user/login`)
 - Backend SQL query handling user authentication
 
 ---
 
-## 💉 Payload Used
+##  Payload Used
 
 ```sql
 ' OR 1=1 --
@@ -26,7 +26,7 @@ This flaw enables authentication bypass without valid credentials.
 
 ---
 
-## 🔍 Exploitation Steps
+##  Exploitation Steps
 
 ### 1. Navigate to Login Page
 
@@ -77,7 +77,7 @@ WHERE TRUE
 
 ---
 
-## 🧠 Root Cause
+##  Root Cause
 
 * Unsanitized user input directly embedded in SQL queries
 * Lack of parameterized queries (prepared statements)
@@ -85,9 +85,9 @@ WHERE TRUE
 
 ---
 
-## 🛡️ Mitigation
+## Mitigation
 
-### ✅ Use Parameterized Queries
+### Use Parameterized Queries
 
 **Example (Node.js):**
 
@@ -97,54 +97,29 @@ db.query("SELECT * FROM users WHERE email = ? AND password = ?", [email, passwor
 
 ---
 
-### ✅ Input Validation
+### Input Validation
 
 * Reject or sanitize special characters (`'`, `--`, `;`)
 * Use allowlists where possible
 
----
-
-### ✅ Use ORM Frameworks
-
-* Sequelize
-* Hibernate
-
----
-
-### ✅ Principle of Least Privilege
-
-* Restrict database user permissions
-
----
-
-## 📊 Severity
+## Severity
 
 **High / Critical**
 
 ---
 
-## 🧾 OWASP Classification
+##  OWASP Classification
 
-* OWASP Top 10: **A03: Injection**
+* OWASP Top 10: **A05:2025 -Injection**
 
 ---
 
-## 🧾 Conclusion
+##  Conclusion
 
 The application is vulnerable to SQL Injection in the login functionality, allowing attackers to bypass authentication using payloads such as `' OR 1=1 --`. This results in unauthorized access to privileged accounts, including administrators. Proper use of parameterized queries and input validation is required to remediate this issue.
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 * Web Browser (manual testing)
-* (Optional) Burp Suite for interception and manipulation
-
----
-
-## 📌 References
-
-* OWASP SQL Injection: [https://owasp.org/www-community/attacks/SQL_Injection](https://owasp.org/www-community/attacks/SQL_Injection)
-* OWASP Juice Shop Project: [https://owasp.org/www-project-juice-shop/](https://owasp.org/www-project-juice-shop/)
-
-
