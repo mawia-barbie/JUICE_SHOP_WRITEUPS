@@ -43,7 +43,7 @@ Open the OWASP Juice Shop login interface.
 | Password | `anything`                        |
 the image below ilustrates the payload used
 
-![jim_account](..injection_images/loginasjim.png)
+![jim_account](../injection_images/loginasjim.png)
 
 
 
@@ -76,7 +76,7 @@ WHERE email='jim@juice-sh.op'
 ### 5. Result
 as shown in the image below i was able to log in as jim
 
-![jim_account](..injection_images/jimaccount.png)
+![jim_account](../injection_images/jimaccount.png)
 
 * Authentication is bypassed
 * Application logs in as **Jim**

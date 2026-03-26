@@ -42,7 +42,7 @@ Access the Juice Shop login interface.
 | Password | `anything`    |
 
 i have attached a screenshot of the same below
-![administartoraccount](injection_images/adminaccountinjection.png)
+![administartoraccount](../injection_images/adminaccountinjection.png)
 ---
 
 ### 3. Interpreted SQL Query
