@@ -29,14 +29,16 @@ Modern web applications must properly encode special characters in URLs. Failure
 
 ##  Initial Observation
 
-While browsing the **Photo Wall**, one image appeared broken (not loading correctly).
+While browsing the **Photo Wall**, one image appeared broken (not loading correctly) as shown in the image below:
+![brokenimage](improper_input_validation_images/brokenimage.png)
 
 Using browser Developer Tools (Inspect Element), the following image path was identified:
 
 /assets/public/images/uploads/ᓚᘏᗢ-#zatschi-#whoneedsfourlegs-1572600969477.jpg
 
  ## problem identification
-The issue lies in the use of the # character within the file name:
+The issue lies in the use of the # character within the file name as shown in the image below
+![brokenlink](improper_input_validation_images/devtool.png)
 
 ᓚᘏᗢ-#zatschi-#whoneedsfourlegs-1572600969477.jpg
 Why is this a problem?
