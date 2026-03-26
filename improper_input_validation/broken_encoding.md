@@ -73,7 +73,7 @@ http://localhost:3000/assets/public/images/uploads/ᓚᘏᗢ-%23zatschi-%23whone
 
 The image should now load successfully as shown below
 
-![Solution Screenshot](improper_input_validation/improper_input_validation_images/solution.png)
+![Solution Screenshot](improper_input_validation_images/solution.png)
 ## Key Takeaways
 
 - Always validate and encode user input properly.
