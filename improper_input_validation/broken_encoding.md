@@ -67,7 +67,9 @@ Encoding Rule
 
 ##execution
 
-Paste the corrected URL into the browser using your developer tools 
+Paste the corrected URL into the browser using your developer tools as shown and press enter
+
+![corrected url](improper_input_validation_images/correctedimagelink with encoding.png)
 
 http://localhost:3000/assets/public/images/uploads/ᓚᘏᗢ-%23zatschi-%23whoneedsfourlegs-1572600969477.jpg
 
